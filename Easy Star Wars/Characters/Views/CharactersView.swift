@@ -7,31 +7,16 @@
 
 import SwiftUI
 
-struct CharacterViewModel: Hashable {
-    var name: String
-    var specie: String
-    var image: String
-}
-
 struct CharactersView: View {
     
-    let characters: [CharacterViewModel] = [
-        CharacterViewModel(name: "Luke Skywalker", specie: "Human", image: "phasma"),
-        CharacterViewModel(name: "Phasma", specie: "Human", image: "phasma")
-    ]
+    @ObservedObject var viewModel: CharactersViewModel
     
     var body: some View {
         NavigationView {
             List {
-                Section {
-                    ForEach(characters, id: \.self) { character in
-                        CharacterCell(character: character)
-                    }
-                } // Section
-                header: {
-                    Text("Human").foregroundColor(.green)
+                ForEach(viewModel.characters, id: \.self) { character in
+                    CharacterCell(character: character)
                 }
-                .headerProminence(.increased)
             }
             .navigationTitle("Characters")
         }
@@ -40,11 +25,11 @@ struct CharactersView: View {
 
 struct CharacterCell: View {
     
-    let character: CharacterViewModel
+    let character: CharacterModel
     
     var body: some View {
         HStack {
-            Image("Phasma")
+            Image(uiImage: character.image?.load() ?? UIImage())
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 72.0, height: 72.0)
@@ -53,7 +38,7 @@ struct CharacterCell: View {
                 Text(character.name)
                     .foregroundColor(.black)
                     .bold()
-                Text(character.specie)
+                Text(character.species)
                     .foregroundColor(.gray)
             } // VStack
             
@@ -69,8 +54,7 @@ struct CharacterCell: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CharactersView()
-            CharactersView()
+            CharactersView(viewModel: CharactersViewModel(network: NetworkManager()))
         }
     }
 }

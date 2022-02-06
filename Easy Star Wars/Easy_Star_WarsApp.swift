@@ -10,8 +10,11 @@ import SwiftUI
 @main
 struct Easy_Star_WarsApp: App {
     var body: some Scene {
-        WindowGroup {
-            CharactersView()
+        let network = NetworkManager()
+        let viewModel = CharactersViewModel(network: network)
+        
+        return WindowGroup {
+            CharactersView(viewModel: viewModel)
         }
     }
 }

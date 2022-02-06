@@ -11,6 +11,13 @@
 		365E0603278B679F002CC77E /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365E0602278B679F002CC77E /* CharactersView.swift */; };
 		365E0605278B67A1002CC77E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 365E0604278B67A1002CC77E /* Assets.xcassets */; };
 		365E0608278B67A1002CC77E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 365E0607278B67A1002CC77E /* Preview Assets.xcassets */; };
+		36C92BE127AED842001D4039 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C92BE027AED842001D4039 /* CharactersViewModel.swift */; };
+		36C92BE427AEEE2D001D4039 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C92BE327AEEE2D001D4039 /* Characters.swift */; };
+		36C92BE727AEF0CC001D4039 /* CharactersNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C92BE627AEF0CC001D4039 /* CharactersNetwork.swift */; };
+		36C92BE927AEF2C3001D4039 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C92BE827AEF2C3001D4039 /* CharacterModel.swift */; };
+		36C92BF127AEF9CE001D4039 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C92BF027AEF9CE001D4039 /* NetworkManager.swift */; };
+		36C92BF327AEFA3C001D4039 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C92BF227AEFA3C001D4039 /* NetworkInterface.swift */; };
+		36C92BF627B02772001D4039 /* URL+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C92BF527B02771001D4039 /* URL+LoadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		365E0602278B679F002CC77E /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		365E0604278B67A1002CC77E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		365E0607278B67A1002CC77E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		36C92BE027AED842001D4039 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		36C92BE327AEEE2D001D4039 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		36C92BE627AEF0CC001D4039 /* CharactersNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersNetwork.swift; sourceTree = "<group>"; };
+		36C92BE827AEF2C3001D4039 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		36C92BF027AEF9CE001D4039 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		36C92BF227AEFA3C001D4039 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
+		36C92BF527B02771001D4039 /* URL+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+LoadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +65,9 @@
 		365E05FF278B679F002CC77E /* Easy Star Wars */ = {
 			isa = PBXGroup;
 			children = (
+				36C92BF427B0275C001D4039 /* Extensions */,
+				36C92BDE27AED6FC001D4039 /* Characters */,
 				365E0600278B679F002CC77E /* Easy_Star_WarsApp.swift */,
-				365E0602278B679F002CC77E /* CharactersView.swift */,
 				365E0604278B67A1002CC77E /* Assets.xcassets */,
 				365E0606278B67A1002CC77E /* Preview Content */,
 			);
@@ -65,6 +80,60 @@
 				365E0607278B67A1002CC77E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		36C92BDB27AED68F001D4039 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				365E0602278B679F002CC77E /* CharactersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36C92BDE27AED6FC001D4039 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				36C92BE527AEEFBB001D4039 /* Network */,
+				36C92BE227AEEDE7001D4039 /* Models */,
+				36C92BDF27AED729001D4039 /* ViewModels */,
+				36C92BDB27AED68F001D4039 /* Views */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		36C92BDF27AED729001D4039 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				36C92BE027AED842001D4039 /* CharactersViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		36C92BE227AEEDE7001D4039 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36C92BE327AEEE2D001D4039 /* Characters.swift */,
+				36C92BE827AEF2C3001D4039 /* CharacterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		36C92BE527AEEFBB001D4039 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				36C92BE627AEF0CC001D4039 /* CharactersNetwork.swift */,
+				36C92BF027AEF9CE001D4039 /* NetworkManager.swift */,
+				36C92BF227AEFA3C001D4039 /* NetworkInterface.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		36C92BF427B0275C001D4039 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				36C92BF527B02771001D4039 /* URL+LoadImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +206,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C92BE727AEF0CC001D4039 /* CharactersNetwork.swift in Sources */,
+				36C92BE127AED842001D4039 /* CharactersViewModel.swift in Sources */,
 				365E0603278B679F002CC77E /* CharactersView.swift in Sources */,
+				36C92BF127AEF9CE001D4039 /* NetworkManager.swift in Sources */,
+				36C92BF327AEFA3C001D4039 /* NetworkInterface.swift in Sources */,
+				36C92BE927AEF2C3001D4039 /* CharacterModel.swift in Sources */,
 				365E0601278B679F002CC77E /* Easy_Star_WarsApp.swift in Sources */,
+				36C92BF627B02772001D4039 /* URL+LoadImage.swift in Sources */,
+				36C92BE427AEEE2D001D4039 /* Characters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +353,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +383,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
